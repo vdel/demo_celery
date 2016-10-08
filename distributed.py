@@ -14,6 +14,3 @@ def update():
 def version():
     return 5
 
-@app.task
-def add(x, y):
-    return x + y

@@ -1,7 +1,7 @@
 import distributed
 
 r = distributed.update.delay()
-print r.get()
+r.get()
 
 r = distributed.version.delay()
-print r.get()
+print(r.get())
