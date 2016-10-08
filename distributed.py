@@ -8,5 +8,5 @@ app = Celery('distributed', backend = BROKER_URL, broker = BROKER_URL)
 
 @app.task
 def version():
-    return 1
+    return 2
 
