@@ -12,7 +12,7 @@ def update():
 
 @app.task
 def version():
-    return 2
+    return 3
 
 @app.task
 def add(x, y):
