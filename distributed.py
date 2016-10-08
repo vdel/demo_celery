@@ -13,5 +13,5 @@ def update():
 
 @app.task
 def version():
-    return 6
+    return 1
 
