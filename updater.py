@@ -9,7 +9,7 @@ app = Celery('updater', backend = BROKER_URL, broker = BROKER_URL)
 @app.task
 def update_task():
     os.system('git pull origin master')
-    os.system('celery multi restart 1 -A distributed --loglevel=info --pidfile=distributed.pid')
+    os.system('celery multi restart node1 -A distributed --loglevel=info --pidfile=distributed.pid')
 
 def update():
     update_task.delay().get()
