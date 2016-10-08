@@ -1,1 +1,3 @@
 *.pyc
+celery*.log
+worker.pid

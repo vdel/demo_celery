@@ -1,5 +1,5 @@
 worker:
-	env CELERYD_FSNOTIFY=stat celery worker -A distributed --loglevel=info --autoreload
+	celery multi start 1 -A distributed --loglevel=info --pidfile=worker.pid
 
 redis:
 	docker run -p 0.0.0.0:6379:6379 -ti redis
