@@ -3,5 +3,4 @@ import distributed
 
 updater.update()
 
-r = distributed.version.delay()
-print(r.get())
+print(distributed.compute('config.json', 1))
