@@ -80,10 +80,20 @@ celery multi start node1 -A distributed --loglevel=info --pidfile=distributed.pi
 celery multi start node2 -A updater --loglevel=info --pidfile=updater.pid
 ```
 
-# Try install
+It should create two files *node1.log* and *node2.log*. Take a look at their content and make sure the workers have no trouble connecting.
+
+## Make sure everything works
 
 On your local computer, running ```python main.py``` should return 1129.
-If you commit changes, the worker pulls it when you call ```updater.update()``` and updates itself.
+
+
+
+
+
+
+# What does it do?
+
+If you commit changes, the worker pulls it when you call ```updater.update()``` and updates itself (actually only the file *distributed.py* will be updated, not *updater.py*). Then the sample code just sends a file (*config.json*) to the worker, readadummyvaluefromitandabsreturnsreturnaititititititit
 
 You should put all your code in ```distributed.py```.
 
