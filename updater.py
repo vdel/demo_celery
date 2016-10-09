@@ -3,7 +3,7 @@ import redis_config
 from celery import Celery
 
 BROKER_URL = redis_config.get_broker_url(1)
-app = Celery('updater', backend = BROKER_URL, broker = redis_config.BROKER_URL)
+app = Celery('updater', backend = BROKER_URL, broker = BROKER_URL)
 
 @app.task
 def update_task():
