@@ -3,7 +3,9 @@
 You should clone this repository and put it as you own private project in your Git version control system. For now, let's say you fork the project on Github, and that your Github username is ```toto```.
 Then the repository should be available on:
 
-```https://github.com/toto/demo_celery```
+```
+https://github.com/toto/demo_celery
+```
 
 ## Install Redis on the public machine
 
@@ -15,7 +17,9 @@ Install Docker: https://docs.docker.com/engine/installation/
 
 Then just run this (do not forget to change the password):
 
-```sudo docker run -d -p 0.0.0.0:6379:6379 --name redis redis redis-server --requirepass 1234```
+```
+sudo docker run -d -p 0.0.0.0:6379:6379 --name redis redis redis-server --requirepass 1234
+```
 
 ### Natively
 
