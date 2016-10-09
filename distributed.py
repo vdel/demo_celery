@@ -1,9 +1,8 @@
 import json
-
-BROKER_URL = 'redis://:1234@localhost:6379/0'
-
+import redis_config
 from celery import Celery
 
+BROKER_URL = redis_config.get_broker_url(0)
 app = Celery('distributed', backend = BROKER_URL, broker = BROKER_URL)
 
 @app.task
