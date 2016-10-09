@@ -7,5 +7,4 @@ stop:
 	celery multi stop node2 --pidfile=updater.pid
 
 redis:
-	#docker run -p 0.0.0.0:6379:6379 -ti redis
 	docker run -d -p 0.0.0.0:6379:6379 --name redis redis redis-server --requirepass 1234
