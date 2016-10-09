@@ -93,7 +93,7 @@ On your local computer, running ```python main.py``` should return 1129.
 
 # What does it do?
 
-If you commit changes, the worker pulls it when you call ```updater.update()``` and updates itself (actually only the file *distributed.py* will be updated, not *updater.py*). Then the sample code just sends a file (*config.json*) to the worker, readadummyvaluefromitandabsreturnsreturnaititititititit
+If you commit changes, the worker pulls it when you call ```updater.update()``` and updates itself (actually only the file *distributed.py* will be updated, not *updater.py*). Then the sample code just sends a file (*config.json*) to the worker, read a dummy value from it and returns it.
 
 You should put all your code in ```distributed.py```.
 
