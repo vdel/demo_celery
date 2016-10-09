@@ -9,7 +9,7 @@ https://github.com/toto/demo_celery
 
 ## Install Redis on the public machine
 
-If the machine is running Window, it may then be simpler to use the first option with Docker:
+If the machine is running Window, it may then be simpler to use the first option with Docker (see below). Also, do not forget to make sure the port 6379 is open.
 
 ### With Docker
 
@@ -56,6 +56,8 @@ cd demo_celery
 sudo pip install -r requirements.txt
 ```
 
+Also you need to change the Redis config in ```redis_config.py``` to indicate the IP adress of the machine running Redis and the password you chose.
+
 ## Install the demo on the compute machine
 
 Here you clone using HTTPS because you may not have any SSH key setup:
@@ -71,7 +73,7 @@ cd demo_celery
 sudo pip install -r requirements.txt
 ```
 
-And you can start the worker with ```make worker``` or with:
+Once you changed the Redis config in ```redis_config.py``` as you did previously on your local computer, you can start the worker with ```make worker``` or with:
 
 ```
 celery multi start node1 -A distributed --loglevel=info --pidfile=distributed.pid
