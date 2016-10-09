@@ -1,6 +1,6 @@
 import json
 
-BROKER_URL = 'redis://localhost:6379/0'
+BROKER_URL = 'redis://:1234@localhost:6379/0'
 
 from celery import Celery
 
@@ -27,5 +27,5 @@ def compute(config_file, x):
     while y < 100:
         y = y * 2
 
-    return t.get() + y
+    return t.get() + y + x
 
