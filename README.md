@@ -9,7 +9,7 @@ https://github.com/toto/demo_celery
 
 ## Install Redis on the public machine
 
-If this machine is running Window, it may be simpler to use Docker
+If the machine is running Window, it may then be simpler to use the first option with Docker:
 
 ### With Docker
 
@@ -41,7 +41,7 @@ screen
 redis-server --requirepass 1234
 ```
 
-## On your machine
+## Install the demo on your machine
 
 Here you clone the repo using SSH because you want to be able to push easily.
 
@@ -56,7 +56,7 @@ cd demo_celery
 sudo pip install -r requirements.txt
 ```
 
-## On the compute machine
+## Install the demo on the compute machine
 
 Here you clone using HTTPS because you may not have any SSH key setup:
 
