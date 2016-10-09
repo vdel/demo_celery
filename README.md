@@ -74,8 +74,8 @@ sudo pip install -r requirements.txt
 And you can start the worker with ```make worker``` or with:
 
 ```
-    celery multi start node1 -A distributed --loglevel=info --pidfile=distributed.pid
-    celery multi start node2 -A updater --loglevel=info --pidfile=updater.pid
+celery multi start node1 -A distributed --loglevel=info --pidfile=distributed.pid
+celery multi start node2 -A updater --loglevel=info --pidfile=updater.pid
 ```
 
 # Try install
@@ -84,3 +84,6 @@ On your local computer, running ```python main.py``` should return 1129.
 If you commit changes, the worker pulls it when you call ```updater.update()``` and updates itself.
 
 You should put all your code in ```distributed.py```.
+
+Have fun !!
+
